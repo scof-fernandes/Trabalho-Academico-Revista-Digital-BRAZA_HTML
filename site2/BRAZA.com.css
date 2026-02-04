@@ -1,0 +1,405 @@
+/* 1. RESET E BASE */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background-color: #fcfcfc;
+    color: #332d2d; /* Preto suave para leitura confortável */
+    line-height: 1.6; /* Melhora o espaçamento entre linhas */
+}
+
+/* Títulos com fonte serifada para ar editorial */
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+    color: #0a3103;
+}
+
+/* 2. HEADER */
+header {
+    background-color: #0a3103;
+    color: #fff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(211, 203, 203, 0.2); /* Sombra para destacar */
+}
+
+.logo {
+    /* MUDANÇA PRINCIPAL: Altera de linha para coluna */
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; /* Alinha o conteúdo à esquerda dentro da coluna */
+    
+}
+
+/* Estilo para a imagem da logo (logo-icone) */
+.logo-icone {
+    height: 36px; /* Altura fixa para ser 'pequenininha' */
+    width: auto;
+    margin-right: 8px; /* Espaço entre a logo e o texto */
+    /* Garante que o ícone não se distorça verticalmente */
+    flex-shrink: 0; 
+}
+
+.frase-efeito {
+    /* Cor de texto sutil no fundo verde */
+    color: #ffffff; 
+    font-size: em;
+    font-family: 'Open Sans';
+    font-weight: 500;
+}
+
+.btn-voltar {
+    color: #270a0a;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 1px 1px;
+    border-radius: 1px;
+    transition: all 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color:  #ffffff;
+    color: #000000;
+}
+
+.layout-leitura {
+    display: flex;
+    width: 96%;
+    max-width: 1500px;
+    margin: 0 auto 40px auto;
+    gap: 5px; /* Espaço entre o menu e o texto */
+    align-items: flex-start; /* Importante para o sticky funcionar */
+}
+
+
+.sumario-lateral {
+    flex: 0 0 300px;
+    position: sticky;
+    top: 70px; /* Abaixo do header fixo */
+    padding-right: 20px;
+    border-right: 1px solid #eee;
+}
+
+.sumario-lateral h4 {
+    text-transform: uppercase;
+    font-size: 1.10em;
+    margin-bottom: 9px;
+    letter-spacing: 1px;
+}
+
+.sumario-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sumario-lateral a {
+    text-decoration: none;
+    color: #555;
+    display: block;
+    padding: 8px 0;
+    transition: color 0.2s;
+    font-size: 1.10em;
+}
+
+.sumario-lateral a:hover {
+    color: #327909;
+    font-weight: 600;
+}
+
+
+.conteudo-principal {
+    flex-grow: 1;
+    max-width: 2000px; 
+    background-color: #ffffff; 
+    padding: 30px; 
+    border-radius: 1px;
+    box-shadow: 0 0 120px rgba(0, 0, 0, 0.05);
+}
+
+
+    
+.imagem-destaque-topo {
+    width: 100%; /* Ocupa 100% da largura disponível no .conteudo-principal */
+    margin: 0 0 30px 0; /* Espaçamento: 30px abaixo da imagem */
+    padding: 0;
+    
+    /* Garante que a imagem se comporte como um bloco e esteja centralizada */
+    display: block;
+    text-align: center;
+}
+
+.imagem-destaque-topo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Opcional: para suavizar as bordas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+}
+
+.conteudo-principal h2 {
+    font-size: 1.8em;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #327909; /* Detalhe verde */
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.conteudo-principal p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: left; /* Justificar na web cria buracos, left é mais limpo */
+    color: #333;
+}
+
+/* Destaque / Citação */
+.citacao {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-size: 1.3em;
+    color: #0a3103;
+    border-left: 4px solid #327909;
+    padding-left: 20px;
+    margin: 40px 0;
+    background-color: #f4fcf2; /* Fundo verde bem claro */
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Imagens */
+figure {
+    margin: 40px 0;
+    width: 100%;
+    text-align: center;
+}
+
+figure img {
+    /* 1. MUDANÇA AQUI: Defina a largura máxima desejada. */
+    /* Exemplo: 80% para deixar 10% de margem em cada lado */
+    max-width: 80%; 
+    
+    width: auto; /* Garante que a largura seja calculada corretamente */
+    height: auto;
+    display: block; 
+    margin: 0 auto; /* Garante que a imagem fique centralizada */
+    /* ... outros estilos de borda e sombra ... */
+}
+
+figcaption {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 8px;
+    text-align: center;
+    font-style: italic;
+}
+
+.meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 40px;
+}
+
+/* Estilo Base para todos os Blocos de Anúncio */
+.bloco-anuncio {
+    border: 1px solid #ddd; /* Borda cinza suave para delimitar */
+    padding: 15px;
+    margin: 30px 0; /* Espaço acima e abaixo do anúncio */
+    background-color: #f9f9f9; /* Fundo levemente cinza/claro */
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.bloco-anuncio h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* 1. Ajuste específico para o Anúncio na Sidebar */
+.anuncio-fixo {
+    /* Garante que o anúncio na lateral tenha o mesmo alinhamento do sumário */
+    max-width: 250px; 
+    margin-top: 40px;
+    
+    /* Se você quiser a cor de fundo verde escuro: */
+    /* background-color: #0a3103;
+    color: #fff; */
+}
+
+/* 2. Ajuste para o Anúncio no Meio do Artigo */
+.anuncio-in-artigo {
+    /* Centraliza o bloco na área de conteúdo */
+    max-width: 740px; /* Largura comum para banners grandes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Garante que qualquer imagem dentro de um anúncio seja responsiva e se ajuste */
+.bloco-anuncio img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaços extras comuns em imagens */
+    margin: 5px auto 0 auto; /* Centraliza a imagem e adiciona espaço acima */
+}
+
+/* --- BARRA COLORIDA DE DESTAQUE (CALLOUT) --- */
+.barra-destaque {
+    background-color:#0a3103; ; /* Um verde claro para o fundo */
+    color: #ffffff; /* Texto branco para alto contraste */
+    
+    margin-left: 0px; 
+    margin-right: 0px;
+
+    /* Espaçamento e Formato */
+    padding: 10px 10px; /* Espaçamento interno (topo/base e laterais) */
+    margin: 0px 0; /* Margem externa para separar do texto ao redor */
+    border-radius: 0px; /* Cantos arredondados suaves */
+    
+    /* Tipografia */
+    font-size: 1.3em; /* Texto maior que o corpo do artigo */
+    font-weight: 600; /* Texto em negrito */
+    text-align: center; /* Centraliza o texto na barra */
+}
+
+.noticias-grid {
+    flex: 1; /* Ocupa o espaço restante */
+    display: grid;
+    /* Grid com 2 colunas, exceto para o destaque */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+}
+
+/* Card Genérico */
+.card-noticia {
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.card-noticia img {
+    width: 70%;
+    height: center;
+    display: block;
+}
+
+.imagem-container {
+    /* Define o container como um Flex Container */
+    display: flex;
+    /* Centraliza o item filho (a imagem) horizontalmente */
+    justify-content: center;
+    /* Define uma altura, se necessário (opcional) */
+    height: 150px; 
+    margin-bottom: 5px; /* Espaço entre a imagem e o texto */
+}
+
+.imagem-container img {
+    /* Define a largura máxima da imagem para diminuí-la */
+    max-width: 97%; 
+    /* Garante que a altura seja ajustada proporcionalmente */
+    height: auto; 
+    /* Garante que a imagem caiba perfeitamente no container, sem distorcer (opcional) */
+    object-fit: cover; 
+}
+
+.card-noticia h3, .card-noticia h2 {
+    padding: 15px 15px 5px;
+}
+.card-noticia p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+    color: #535353;
+}
+
+/* Destaque Ocupa 2 Colunas */
+.destaque {
+    grid-column: 1 / -1; /* Ocupa todas as colunas (1 até o final) */
+}
+.destaque h2 {
+    font-size: 2.5em;
+}
+
+/* No seu arquivo noticias.css (Seção 4) */
+
+.btn-leia-mais {
+    display: inline-block;
+    color: #0a5304;
+    background-color: #f5f5f5;
+    
+    /* MUDANÇA 1: Aumentar o PADDING (espaçamento interno) */
+    /* De 8px 15px (original) para, por exemplo, 12px 25px */
+    padding: 10px 18px; 
+    
+    border-radius: 4px;
+    margin: 0 15px 15px;
+    text-transform: uppercase;
+    
+    /* MUDANÇA 2: Aumentar o FONT-SIZE (tamanho do texto) */
+    font-size: 1em; /* De 0.9em (original) para 1em ou mais */
+    font-weight: bold; /* Para dar mais peso ao texto */
+    transition: background-color 0.3s;
+}
+
+.btn-leia-mais:hover {
+    background-color: #0a3103;
+    text-decoration: none;
+}
+
+/* 6. FOOTER (CORRIGIDO) */
+footer {
+    background-color: #0a3103;
+    color: #fff;
+    padding: 40px 5%;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite quebrar linha no mobile */
+    gap: 30px;
+}
+
+.footer-logo-area {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.logo-rodape {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Grid de Créditos */
+.footer-creditos {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cria colunas automáticas */
+    gap: 20px;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    padding-left: 30px;
+}
+
+.credito-item {
+    font-size: 0.85em;
+    color: #ccc;
+}
+
+.credito-item strong {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
