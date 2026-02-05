@@ -3,8 +3,9 @@
 
 Este projeto demonstra proficiência em desenvolvimento front-end ao adaptar uma revista impressa para o ambiente web. O foco principal foi a aplicação de HTML5 semântico e CSS3 avançado para criar uma experiência de leitura digital fluida e moderna.
 
-##  Acesse o Site Online
-**[Revista Digital BRAZA]( https://scof-fernandes.github.io/Trabalho-Academico-Revista-Digital-BRAZA_HTML/)**
+##  Links Úteis
+* **[Revista Digital BRAZA]( https://scof-fernandes.github.io/Trabalho-Academico-Revista-Digital-BRAZA_HTML/)**
+* **[Visite o Meu LinkedIn]( dcdc)**
 
 ##  Demonstração Visual
 Aqui você pode ver a fluidez da navegação e o layout adaptável do site em funcionamento.
